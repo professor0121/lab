@@ -93,7 +93,7 @@ function findPageDetails(textContent, pageIndex) {
         else if (text.toLowerCase().includes("shadowfax"))
             partner = "Shadowfax";
         if (text.toLowerCase() === "sku") skuLineIndex = index;
-        if (skuLineIndex !== -1 && index === skuLineIndex + 9) {
+        if (skuLineIndex !== -1 && index === skuLineIndex + 10) {
             sku = text;
             skuLineIndex = -1;
         }

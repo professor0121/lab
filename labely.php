@@ -1,10 +1,10 @@
 <?php
 /**
  * Plugin Name: Labely
- * Plugin URI: 
+ * Plugin URI: https://github.com/professor0121/lab
  * Description: A custom plugin for Labely functionality.
  * Version: 1.0.1
- * Author: Your Name
+ * Author: Abhishek kushwaha 
  * Author URI: https://www.linkedin.com/in/abhishek-kushwaha-5a3a49302/
  * License: GPL2
  */
