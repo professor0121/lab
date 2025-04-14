@@ -34,7 +34,7 @@
             <progress id="progressBar" value="0" max="100"></progress>
             <div id="message"></div>
             <button id="downloadButton" disabled>Download Cropped PDF</button>
-            <label for="partnerFilter" style="display:non">Filter by Partner:</label>
+            <label for="partnerFilter" style="display:none">Filter by Partner:</label>
             <select id="partnerFilter" disabled style="display:none; visibility: hidden;">
                 <option value="all">All</option>
             </select>
