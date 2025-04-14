@@ -1,132 +1,244 @@
 
-.main-container{
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    font-family: Arial, sans-serif;
+/* Base Styles & Variables */
+:root {
+    --primary-color: #007bff;
+    --primary-hover: #0056b3;
+    --background-color: #f0f2f5;
+    --card-bg: #ffffff;
+    --text-color: #333;
+    --subtext-color: #494949;
+    --border-color: #e1e1e1;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
 }
 
-  .co-container {
-    display: flex;
-    width: 100%;
-    min-height: 40vh;
-    justify-content: center;
-  }
-
-  .sidebar {
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 65%;
-    padding: 40px;
+* {
     box-sizing: border-box;
-    border: 1px solid rgb(225, 225, 225);
-    border-radius: 5px;
-  }
+    margin: 0;
+    padding: 0;
+}
 
-  .sidebar h1 {
+.main-container{
+    font-family: 'Arial', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Container & Layout */
+.co-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.sidebar {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 10px var(--shadow);
+    border-radius: var(--border-radius);
+    padding: 40px;
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sidebar h1 {
     font-size: 1.8em;
     margin-bottom: 10px;
-    color: #333;
-  }
+    color: var(--text-color);
+}
 
-  .sidebar p {
-    font-size: 1.2em;
-    color: #494949;
-    line-height: 1.4em;
-  }
+.sidebar p {
+    font-size: 1.1em;
+    color: var(--subtext-color);
+    margin-bottom: 20px;
+}
 
-  .sidebar label {
-    display: block;
-    margin-top: 30px;
-    font-weight: bold;
-    color: #333;
-    font-size: 1.2em;
+/* Form Elements */
+.sidebar label {
+    font-weight: 500;
+    font-size: 18px;
     margin-bottom: 8px;
-  }
+    display: block;
+}
 
-  .sidebar input[type="file"] {
-    width: 95%;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background: #fff;
-    cursor: pointer;
-  }
+.file-input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
 
-  .sidebar button, .sidebar select {
-    margin-top: 20px;
-    padding: 10px;
+.file-input-wrapper label {
+    flex-shrink: 0;
+}
+
+.file-input-wrapper input[type="file"] {
+    flex-grow: 1;
+    padding: 14px;
+    height: 50px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background: #fafafa;
     width: 100%;
+}
+
+.flex {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.layout-mode-radio,
+.sort-radio {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.label-style {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 12px;
+    background: #fafafa;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background 0.3s;
+    user-select: none;
+}
+
+.label-style:hover {
+    background: #f2f2f2;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+progress {
+    width: 100%;
+    height: 20px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    appearance: none;
+    margin-top: 5px;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: var(--border-radius);
+}
+
+progress::-webkit-progress-value {
+    background-color: var(--primary-color);
+}
+
+#message {
+    font-size: 0.9em;
+    margin-top: 10px;
+    min-height: 20px;
+    color: red;
+}
+
+button {
+    padding: 12px;
     border: none;
-    border-radius: 4px;
-    font-size: 1em;
-    background: #007bff;
+    border-radius: var(--border-radius);
+    background: var(--primary-color);
     color: #fff;
+    font-size: 1em;
     cursor: pointer;
     transition: background 0.3s;
     text-align: center;
-  }
+}
 
-  .sidebar button:hover {
-    background: #0056b3;
-  }
+button:hover {
+    background: var(--primary-hover);
+}
 
-  .sidebar select {
-    background: #fff;
-    color: #333;
-    border: 1px solid #ddd;
+select {
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background: #fafafa;
     margin-top: 10px;
-  }
+}
 
-  #message {
-    margin-top: 10px;
-    color: red;
-    font-size: 0.9em;
-    min-height: 20px;
-  }
-
-  .main-content {
-    flex: 1;
+/* Main Content */
+.main-content {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 10px var(--shadow);
+    border-radius: var(--border-radius);
     padding: 20px;
+    width: 100%;
+    max-width: 900px;
     overflow: auto;
     display: none;
-  }
+}
 
-  #pagesContainer {
+.main-content h2 {
+    margin-bottom: 10px;
+}
+
+.main-content p {
+    margin-bottom: 20px;
+    color: var(--subtext-color);
+}
+
+#pagesContainer {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-  }
+}
 
-  .pageWrapper {
+.pageWrapper {
     position: relative;
-    display: inline-block;
+    background: var(--card-bg);
     border: 1px solid #ccc;
-    background: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  }
+    box-shadow: 0 2px 4px var(--shadow);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
 
-  .pageWrapper canvas {
+.pageWrapper canvas {
     display: block;
-  }
+    width: 100%;
+    height: auto;
+}
 
-  h2 {
-    margin-top: 0;
-  }
-
-  .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
     max-width: 100%;
-  }
-  /* ======= responsive design code ====== */
-  @media (max-width: 500px) {
+}
+/* Responsive Design */
+@media (max-width: 600px) {
+    .file-input-wrapper{
+        flex-direction: column;
+        align-items: start;
+    }
     .sidebar {
-      width: 100%;
-      padding: 20px 30px;
+        padding: 20px;
     }
+
     .sidebar h1 {
-      font-size: 1.4em;
+        font-size: 1.5em;
     }
-    .sidebar p {
-      font-size: 1em;
+
+    .sidebar p,
+    .sidebar label {
+        font-size: 1em;
     }
-  }
+
+    .container {
+        padding: 10px;
+    }
+}
