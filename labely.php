@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Labely
- * Plugin URI: https://github.com/professor0121/lab
+ * Plugin URI: 
  * Description: A custom plugin for Labely functionality.
  * Version: 1.0.1
  * Author: Abhishek kushwaha 
